@@ -27,6 +27,42 @@ public class BigCalcProgBaseListener implements BigCalcProgListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterExpres(BigCalcProgParser.ExpresContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpres(BigCalcProgParser.ExpresContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssign(BigCalcProgParser.AssignContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssign(BigCalcProgParser.AssignContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIdent(BigCalcProgParser.IdentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIdent(BigCalcProgParser.IdentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterNum(BigCalcProgParser.NumContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -58,6 +94,18 @@ public class BigCalcProgBaseListener implements BigCalcProgListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMulDiv(BigCalcProgParser.MulDivContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssignment(BigCalcProgParser.AssignmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssignment(BigCalcProgParser.AssignmentContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

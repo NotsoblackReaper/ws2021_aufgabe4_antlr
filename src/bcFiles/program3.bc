@@ -1,0 +1,9 @@
+/**
+ * @author Jonas Demski
+ * @id 11739260
+ * @comment READ-ONLY FILE
+ */
+
+t = 100; s = 200; u = 300; v = 400.0000000000;
+
+((t + s) / u * v);

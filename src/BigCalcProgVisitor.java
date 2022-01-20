@@ -16,6 +16,27 @@ public interface BigCalcProgVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpressionStatement(BigCalcProgParser.ExpressionStatementContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code expres}
+	 * labeled alternative in {@link BigCalcProgParser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpres(BigCalcProgParser.ExpresContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code assign}
+	 * labeled alternative in {@link BigCalcProgParser#statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssign(BigCalcProgParser.AssignContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ident}
+	 * labeled alternative in {@link BigCalcProgParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIdent(BigCalcProgParser.IdentContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code num}
 	 * labeled alternative in {@link BigCalcProgParser#expression}.
 	 * @param ctx the parse tree
@@ -36,4 +57,10 @@ public interface BigCalcProgVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitMulDiv(BigCalcProgParser.MulDivContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link BigCalcProgParser#assignment}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssignment(BigCalcProgParser.AssignmentContext ctx);
 }

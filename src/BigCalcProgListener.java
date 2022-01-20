@@ -17,6 +17,42 @@ public interface BigCalcProgListener extends ParseTreeListener {
 	 */
 	void exitExpressionStatement(BigCalcProgParser.ExpressionStatementContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code expres}
+	 * labeled alternative in {@link BigCalcProgParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpres(BigCalcProgParser.ExpresContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code expres}
+	 * labeled alternative in {@link BigCalcProgParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpres(BigCalcProgParser.ExpresContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code assign}
+	 * labeled alternative in {@link BigCalcProgParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssign(BigCalcProgParser.AssignContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code assign}
+	 * labeled alternative in {@link BigCalcProgParser#statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssign(BigCalcProgParser.AssignContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code ident}
+	 * labeled alternative in {@link BigCalcProgParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterIdent(BigCalcProgParser.IdentContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code ident}
+	 * labeled alternative in {@link BigCalcProgParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitIdent(BigCalcProgParser.IdentContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code num}
 	 * labeled alternative in {@link BigCalcProgParser#expression}.
 	 * @param ctx the parse tree
@@ -52,4 +88,14 @@ public interface BigCalcProgListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMulDiv(BigCalcProgParser.MulDivContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link BigCalcProgParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignment(BigCalcProgParser.AssignmentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link BigCalcProgParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignment(BigCalcProgParser.AssignmentContext ctx);
 }
