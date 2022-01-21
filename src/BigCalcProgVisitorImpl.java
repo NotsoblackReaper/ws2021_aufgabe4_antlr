@@ -15,9 +15,7 @@ public class BigCalcProgVisitorImpl extends BigCalcProgBaseVisitor<BigDecimal> {
     public BigDecimal visitExpressionStatement(BigCalcProgParser.ExpressionStatementContext ctx) {
         BigDecimal res=BigDecimal.ZERO;
         for(var stmt:ctx.statement()){
-            System.out.println("Statement: "+stmt.getText());
             res=visit(stmt);
-            System.out.println("\tTemp res: "+res.toString());
         }
         return res;//Return last value
     }
@@ -48,6 +46,12 @@ public class BigCalcProgVisitorImpl extends BigCalcProgBaseVisitor<BigDecimal> {
     public BigDecimal visitNum(BigCalcProgParser.NumContext ctx) {
         return new BigDecimal(ctx.Number().getText());
     }
+
+    @Override
+    public BigDecimal visitBrackets(BigCalcProgParser.BracketsContext ctx) {
+        return visit(ctx.expression());
+    }
+
 
     @Override
     public BigDecimal visitIdent(BigCalcProgParser.IdentContext ctx){

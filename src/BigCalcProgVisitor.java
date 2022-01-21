@@ -58,6 +58,13 @@ public interface BigCalcProgVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitMulDiv(BigCalcProgParser.MulDivContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code brackets}
+	 * labeled alternative in {@link BigCalcProgParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBrackets(BigCalcProgParser.BracketsContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link BigCalcProgParser#assignment}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

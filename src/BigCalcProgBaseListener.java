@@ -99,6 +99,18 @@ public class BigCalcProgBaseListener implements BigCalcProgListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterBrackets(BigCalcProgParser.BracketsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBrackets(BigCalcProgParser.BracketsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterAssignment(BigCalcProgParser.AssignmentContext ctx) { }
 	/**
 	 * {@inheritDoc}

@@ -22,6 +22,7 @@ expression
         | expression op=('+' | '-') expression  # addSub
         | Number                                # num
         | Identifier                            # ident
+        | '(' expression ')'                    # brackets
         ;
 
 assignment
